@@ -67,7 +67,7 @@ OS name: "linux", version: "7.0.0-38-generic", arch: "amd64", family: "unix"
 
 ### B1: CFG
 
-![CFG bonus](cfg.png)
+![CFG bonus](cfg-bonus.png)
 
 ### B2: Def/use жагсаалт (файлын мөрийн дугаар)
 

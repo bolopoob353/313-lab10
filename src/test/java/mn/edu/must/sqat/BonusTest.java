@@ -55,4 +55,12 @@ class BonusTest {
     void b7_negativeThreshold() {
         assertThrows(IllegalArgumentException.class, () -> DataFlowTargets.bonus(new int[] {1}, -1));
     }
+    
+    @Test
+    @DisplayName("B8 kill M2: present != streak when best updates. best must be 3, not present=5")
+    void b8_presentDiffersFromStreak() {
+        // {1,1,0,1,1,1}, threshold 1: true best=3 (<5), score=5
+        // mutant M2: best=present=5 -> score=8
+        assertEquals(5, DataFlowTargets.bonus(new int[] {1, 1, 0, 1, 1, 1}, 1));
+    }
 }
